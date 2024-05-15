@@ -1,0 +1,88 @@
+\noindent
+\textbf{Liczby pierwsze:} $10^9 + 123, 10^9 + 321, 999999929, 999999937, 10^{18} + 9.$
+
+\noindent
+\textbf{Sumy:} $\sum_{k = 0}^n k^2 = \frac{n(n+1)(2n+1)}{6}$, $\sum_{k = 0}^n k^3 = \frac{n^2(n+1)^2}{4}$, $\sum_{i = n}^m \binom{i}{n} = \binom{m + 1}{n + 1}$, $\sum_{i = 0}^k \binom{n}{i} \binom{m}{k - i} = \binom{n + m}{k}.$
+
+\noindent
+\textbf{Całki:} $\int \frac{1}{ax + b}dx = \frac{1}{a}\ln |ax + b|$, $\int{\tan{x} dx} = -\ln|\cos{x}|$, $\int \frac{1}{x^2 + a^2}dx = \frac{1}{a}\arctan{\frac{x}{a}}$, $\int \frac{1}{x^2 - a^2}dx = \frac{1}{2a}\ln{|\frac{x - a}{x + a}|}$, $\int \frac{1}{\sqrt{a^2 - x^2}}dx = \arcsin{\frac{x}{a}}$, $\int \frac{1}{\sqrt{x^2 + q}}dx = \ln{|x + \sqrt{x^2 + q}|}$, $\int a^xdx = \frac{a^x}{\ln a}.$
+
+\noindent
+\textbf{Liczby Catalana:} $C_{n+1} = \sum_{i=0}^nC_iC_{n-i}$, $C_n = \frac{1}{n+1}\binom{2n}{n} = \binom{2n}{n} - \binom{2n}{n+1}$, $C_{n+1} = C_n \frac{4n+2}{n+2}$, $1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 74290, \dots$
+
+\noindent
+\textbf{Suma dzielników:} $\sigma(n) = \sigma(p_1^{\alpha_1}, \dots, p_k^{\alpha_k}) = \prod_{i = 1}^k \frac{p_i ^ {\alpha_i + 1} - 1}{p_i - 1}.$
+
+\noindent
+\textbf{Funkcja Eulera:} $\phi(p^k) = p^k - p^{k-1}, \phi(ab) = \phi(a)\phi(b) \hbox{ dla } a \bot b, \sum_{d|n}\phi(d)=n.$
+
+\noindent
+\textbf{Funkcja Mobiusa:} $1$ dla liczb bezkwadratowych z parzystą liczbą czynników, $-1$ -- nieparzystą, $0$ dla liczb nie bezkwadratowych. \underline{Inaczej} $\mu(n)$ to suma pierwotnych pierwiastków z jedności stopnia $n$, $\sum_{d|n}\mu(d) = 0$ dla $n>1$.
+
+\noindent
+\textbf{Związek między $\phi$ a $\mu$:} $\phi(n) = \sum_{d|n} \mu(d) \frac{n}{d}.$
+
+\noindent
+\textbf{Programowanie liniowe:} Dla program prymalnego $\max c^{T}x$ z warunkami $Ax \leq b$, $x \geq 0$, program dualny to $\min b^{T}y$ z warunkami
+$A^{T}y \geq c$, $y \geq 0$. Z silnego twierdzenia o dualności: $\max c^{T}x = \min b^{T}y$.
+
+\noindent
+\textbf{Problem znaczków pocztowych:}  Niech $a, b$ względnie pierwsze. Jest dokładnie $\frac{1}{2} (a-1)(b-1)$ liczb,
+których nie da się zapisać w postaci $ax+by(x,y \le 0)$. Największa z nich to $(a - 1)(b - 1) - 1$.
+
+\noindent
+\textbf{Lemat Burnside’a:} Liczba orbit grupy $G$ na zbiorze $X$: $|X/G| = \frac{1}{|G|} \sum_{g \in G} |X_g|$, gdzie $X_g = \{x \in X : g(x) = x\}$. ("Średnia liczba punktów stałych")
+
+\noindent
+\textbf{Metoda Simpsona:} $\int_a^{b=a+2h} f(x)dx = \frac{b - a}{6}(f(a) + 4f(a + h) + f(b)) + O(h^5 f^{(4)}(\xi)).$
+
+\newcommand{\stirlingfirst}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
+\newcommand{\stirlingsecond}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+
+\noindent
+\textbf{Liczby Stirlinga pierwszego rodzaju:} Opisują liczbę sposobów na rozmieszczenie $n$ liczb w $k$ cyklach, $\stirlingfirst{n}{k} = (n-1)\stirlingfirst{n-1}{k} + \stirlingfirst{n-1}{k-1}.$
+
+\noindent
+\textbf{Liczby Stirlinga drugiego rodzaju:} Opisują liczbę sposobów podziału zbioru $n$ elementowego na $k$ niepustych podzbiorów, $\stirlingsecond{n}{k} = k\stirlingsecond{n-1}{k} + \stirlingsecond{n-1}{k-1}$, $\stirlingsecond{n}{k} = \frac{1}{k!}\sum_{j=0}^k (-1)^{k-j} \binom{k}{j} j^n.$
+
+\noindent
+\textbf{Liczby Bella:} Liczba podziałów zbioru $n$ elementowego, $\mathcal{B}_{n+1} = \sum_{k=0}^n \binom{n}{k} \mathcal{B}_k.$
+
+\noindent
+\textbf{Nieuporządkowania:} Permutacje bez elementu stałego, $!n = \lfloor \frac{n!}{e} + \frac{1}{2} \rfloor.$
+
+\noindent
+\textbf{Liczby harmoniczne:} $H_n = \sum_{k = 1}^n \frac{1}{k}$,
+$\frac{1}{2n+1} < H_n - \ln n - \gamma < \frac{1}{2n}$,\\ $\gamma = 0.57721\,56649\,01532\,86060\,65120\ldots$
+
+\noindent
+\textbf{Wzór Picka:} $P = W + \frac{B}{2} - 1$ gdzie $P$ -- pole, $W$ --- wewnętrzne, $B$ -- brzegowe.
+
+\noindent
+\textbf{Trygonometria:} $\sin(\alpha + \beta) = \sin(\alpha) \cos(\beta) + \cos(\alpha) \sin(\beta)$, $\cos(\alpha + \beta) = \cos(\alpha) \cos(\beta) - \sin(\alpha) \sin(\beta)$, tw. sinusów: $\frac{a}{\sin(\alpha)} = \frac{b}{\sin(\beta)} = \frac{c}{\sin(\gamma)} = 2R$, tw. cosinusów: $c^2 = a^2 + b^2 - 2ab\cos(\gamma)$, $R = \frac{abc}{4S}$, $r = \frac{2S}{a + b + c}$, $S = \sqrt{s(s-a)(s-b)(s-c)}$, gdzie $S$ -- pole trójkąta, $s = \frac{a+b+c}{2}$, $r, R$ -- promień okręgu wpisanego/opisanego.
+
+\noindent
+\textbf{Reguła Warnsdorffa obchodzenia skoczkiem szachownicy:} W każdym kroku idź na pole, z którego można zrobić najmniejszą liczbę ruchów do nieodwiedzonych pól.
+
+\noindent
+\textbf{Optymalizacja Knutha:} $dp[i][j] = \min_{i < k < j}\{dp[i][k] + dp[k][j]\} + C[i][j]$, potrzebujemy $opt[i][j - 1] \le opt[i][j] \le opt[i + 1][j]$, gdzie $opt[i][j]$ daje najmniejsze optymalne $k$ dla $dp[i][j]$, wystarcza też $C[a][c] + C[b][d] \le C[a][d] + C[b][c] \hbox{ i } C[b][c] \le C[a][d]$, dla wszytskich $a \le b \le c \le d.$
+
+\noindent
+\textbf{Pokrycie wierzchołkowe i zbiór niezależny:} Niech $M, C, I$ -- maksymalne skojarzenie, minimalne pokrycie wierzchołkowe i maksymalny zbiór niezależny, wtedy $|M| \le |C| = N - |I|$, równość zachodzi dla grafów dwudzielnych. Dodatkowo $C^c = I$ (zawsze). Znajdowanie $C$, $I$ (dla grafu dwudzielnego $(A, B)$): łączymy źródło z wierzchołkami z $A$, wierzchołki z $B$ z ujściem (przepustowość taka jak wagi wierzchołków lub $1$ dla nieważonego), krawędzie między $A$ i $B$ mają przepustowość $\infty$. Znajdujemy minimalne cięcie $(S, T)$. Wtedy $C$ = $(A \cap T) \cup (B \cap S)$ i $I = (A \cap S) \cup (B \cap T).$
+
+\noindent
+\textbf{Macierz sąsiedztwa a liczba drzew spinających:} Niech macierz $T = [t_{ij}]$, gdzie $t_{ij}$ to liczba krawędzi z wierzchołka $i$ do $j$ dla $i \neq j$, $t_{ii} = -\hbox{deg}(i)$. Liczba drzew spinających jest równa wyznacznikowi macierzy $T$ po usunięciu $k$-tego wiersza i $k$-tej kolumny ($k$ dowolne). \underline{Uwaga}: dla niespójnych odpalać osobno dla każdej spójnej składowej.
+
+\noindent
+\textbf{Macierz a perfect matching:} Tutte matrix: $A_{ij} = x_{ij}$ if $(i, j) \in E$ and $i < j$, $-x_{ij}$ if $i > j$, $0$ if there is no edge.
+
+\noindent
+\textbf{Tw. Erdősa-Gallai:} Ciąg $d_1, d_2, ..., d_n$ $(n - 1 \ge d_1 \ge \dots \ge d_n \ge 0)$ jest ciągiem stopni wierzchołków pewnego nieskierowanego grafu prostego $\iff$ $2 | \sum d_i$ i $(\forall k \in \{1, \dots, n-1\}) \sum_{i = 1}^k d_i \le k(k-1) + \sum_{i=k+1}^n \min(k, d_i).$
+
+\noindent
+\textbf{Liczby Bernoulliego:} $B_0 = 1$; $\sum_{k = 0}^{m} \binom{m + 1}{k} B_k = 0$; $1, \frac{-1}{2}, \frac{1}{6}, 0, \frac{-1}{30}, ...$; $\sum_{v = 1}^{n} v^k = \frac{1}{k + 1} \sum_{j = 0}^{k} \binom{k + 1}{j} B_j n^{k + 1 - j}$
+% zostawić to na koniec jako żarcik
+
+\noindent
+\textbf{Dni tygodnia:} $01.01.1600$ -- sobota, $01.01.1900$ -- poniedziałek, $13.06.2042$ -- piątek, $01.04.2008$ -- wtorekm $31.12.1999$ - piątek, $01.01.3000$ -- środa, $04.04.2019$ -- czwartek (dzień finałów).
