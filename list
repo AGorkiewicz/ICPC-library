@@ -1,0 +1,73 @@
+Vimrc lib/template/.vimrc
+Template lib/template/template.cpp
+Pragmas lib/template/pragmas.cpp
+Makefile lib/template/Makefile
+
+2SAT lib/graphs/two_sat.cpp
+Dinic lib/graphs/dinic.cpp
+Gomory-Hu lib/graphs/gomory-hu.cpp
+Min Cost Max Flow lib/graphs/mincostmaxflow.cpp
+Hungarian lib/graphs/hungarian.cpp
+General Matching lib/graphs/GeneralMatching-Random.cpp
+Weighted Graph Matching lib/graphs/randomized-general-weighted-matching.cpp
+Dominator Tree lib/graphs/dominatory2.cpp
+Directed MST lib/graphs/dmst.cpp
+Turbo matching lib/graphs/turbo_matching.cpp
+All maximal cliques lib/graphs/all_maximal_cliques.cpp
+
+Policy-Based Data Structures lib/data-structures/pdb.cpp
+Fast hashtable lib/data-structures/fast_hashtable.cpp
+Set comparator lib/data-structures/set_comparator.cpp
+Fenwick lib/data-structures/fenwick.cpp
+Link Cut Tree lib/data-structures/LCT.cpp
+Subset DP lib/data-structures/subset_dp.cpp
+Linear function max lib/data-structures/linear_function_max.cpp
+Treap lib/data-structures/treap-Adam.cpp
+RMQ lib/data-structures/rmq.cpp
+Wavelet lib/data-structures/wavelet.cpp
+
+Manacher lib/text/Manacher-Radecki.cpp
+Z Algorithm lib/text/Z_algorithm.cpp
+Tablica sufiksowa (KMR) lib/text/SuffixArray-Bohun.cpp
+Minimal Cyclic Shift lib/text/MinCyclicShift.cpp
+All substring LCS lib/text/all-substring-lcs.cpp
+Eer Tree lib/text/eertree.cpp
+Aho Corasick lib/text/Aho-Corasick-Bohun.cpp
+Suffix Automata lib/text/suffix-automata.cpp
+Haszer lib/text/Haszer.cpp
+Fast Haszer lib/text/fast_hasher.cpp
+
+Yarin sieve lib/math/yarin-sieve.cpp
+Arithmetic Progressions Sums lib/math/arithmetic-progressions-sums.cpp
+Partitions lib/math/partitions.cpp
+Chinese Remainder Theorem lib/math/crt.cpp
+Linear Mod Minimum lib/math/linear_mod_min.cpp
+Rabin Miller lib/math/Rabin-Miller2.cpp
+Rho Pollard lib/math/Rho-Pollard.cpp
+FFT lib/math/fft.cpp
+FFT lib/math/fft_Radecki.cpp
+NTT lib/math/ntt_adam.cpp
+Polynomial division lib/math/polydiv.cpp
+General convolutions lib/math/Adam-Transformer.cpp
+Nim Multiplication lib/math/NimMultiplication.cpp
+Green Hackenbush lib/math/green-hackenbush.cpp
+Red Blue Hackenbush lib/math/redblue-hackenbush.cpp
+Berlekamp lib/math/berlekamp.cpp
+Simplex lib/math/simplex.cpp
+Josephus lib/math/Josephus.cpp
+K-th powers lib/math/kth-powers.cpp
+Multiplicative function sum lib/math/multiplicative_function_sum.cpp
+Tonelli Shanks lib/math/Tonelli-Shanks.cpp
+Fractions binary search lib/math/fraction_bs.cpp
+Knight Moves lib/math/Knights-Moves.cpp
+Gauss lib/math/Gauss.cpp
+
+Geometry lib/geometry/geometry.cpp
+Halfplane intersection lib/geometry/halfplane_adam.cpp
+Hull lib/geometry/ch_and_cht.cpp
+Intersection Area of Circle and Polygon lib/geometry/circle_polygon_intersection.cpp
+Minimum enclosing circle lib/geometry/enclosing_circle.cpp
+Manhattan MST lib/geometry/manhattan_mst.cpp
+Many segments intersection lib/geometry/many_segments_intersection.cpp
+3D Hull lib/geometry/3d_hull
+Polygon tangent lib/geometry/polygon_tangent.cpp

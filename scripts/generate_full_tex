@@ -1,0 +1,120 @@
+#!/usr/bin/python3
+
+head = r"""
+\documentclass[10pt, a4paper]{amsart}
+\usepackage[pdftex]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,polish]{babel}
+\usepackage{minted}
+
+\let\mathlll\lll
+\let\lll\babellll
+\selectlanguage{polish}
+
+\usepackage{xcolor}
+\usepackage{listingsutf8}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{courier}
+\usepackage{fancyhdr}
+
+\setminted{breaklines}
+\setminted{fontsize=\scriptsize}
+\usemintedstyle{borland}
+
+\geometry{landscape}
+\setlength{\topmargin}{-0.25in}
+\setlength{\oddsidemargin}{-0.5in}
+\setlength{\evensidemargin}{-0.5in}
+\setlength{\columnsep}{0.2in}
+\setlength{\columnseprule}{0.2pt}
+\textwidth 10.5in
+
+\lstset{basicstyle=\large\tt}
+
+\pagestyle{fancy}
+\lhead{University of Wrocław, UWr1}
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\newcommand{\includecpp}[3]{
+    \section{#1}\
+    {\footnotesize \texttt{#3} }\
+    \inputminted{cpp}{#2}
+}
+
+\begin{document}
+
+  \thispagestyle{fancy}
+
+  \begin{center}
+
+    \Huge
+    The Team Reference Document of UWr1
+    \par
+
+    \parskip 0.1in
+
+    \Large
+    Supported by: prof. dr hab. Krzysztof Loryś, dr Paweł Gawrychowski, mgr Bartłomiej Dudek
+    \par
+
+    \parskip 0.1in
+
+  \end{center}
+
+  \begin{multicols}{2}
+    \tableofcontents
+  \end{multicols}
+
+  \begin{center}
+
+    Generowanie sumy kontrolnej pliku:
+
+    \begin{tabular}{c}
+    \begin{lstlisting}
+    cat plik | tr -d "[:space:]" | md5sum
+    \end{lstlisting}
+    \end{tabular}
+
+  \end{center}
+
+
+
+  \pagebreak
+
+\begin{multicols}{2}
+"""
+
+foot = r"""
+\newpage
+\section{Wzory}
+\input{lib/math/formulas.tex}
+\end{multicols}
+
+
+\end{document}
+
+"""
+
+import sys
+import subprocess
+
+out = open(sys.argv[2], 'w')
+out.write(head)
+
+with open(sys.argv[1]) as f:
+  for l in f.readlines():
+    if l.strip() == '':
+      continue
+    title, path = l.rsplit(maxsplit=1)
+    checksum = subprocess.run('scripts/checksum ' + path, shell=True, stdout=subprocess.PIPE)
+    checksum = checksum.stdout.decode('ascii').split()[0]
+    out.write('\includecpp{%s}{%s}{%s}\n' % (title, path, checksum))
+
+out.write(foot)

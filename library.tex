@@ -1,0 +1,168 @@
+
+\documentclass[10pt, a4paper]{amsart}
+\usepackage[pdftex]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,polish]{babel}
+\usepackage{minted}
+
+\let\mathlll\lll
+\let\lll\babellll
+\selectlanguage{polish}
+
+\usepackage{xcolor}
+\usepackage{listingsutf8}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{courier}
+\usepackage{fancyhdr}
+
+\setminted{breaklines}
+\setminted{fontsize=\scriptsize}
+\usemintedstyle{borland}
+
+\geometry{landscape}
+\setlength{\topmargin}{-0.3in}
+\setlength{\oddsidemargin}{-0.5in}
+\setlength{\evensidemargin}{-0.5in}
+\setlength{\columnsep}{0.2in}
+\setlength{\columnseprule}{0.2pt}
+\textwidth 10.5in
+\textheight 6.64in
+
+\lstset{basicstyle=\large\tt}
+
+\pagestyle{fancy}
+\lhead{University of Wrocław, UWr1}
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\newcommand{\includecpp}[3]{
+    \section{#1}\
+    {\footnotesize \texttt{#3} }\
+    \inputminted{cpp}{#2}
+}
+
+\begin{document}
+
+  \thispagestyle{fancy}
+
+  \begin{center}
+
+    \Huge
+    The Team Reference Document of UWr1
+
+    \par
+
+    \parskip 0.1in
+
+    \Large
+    Supported by: prof. dr hab. Krzysztof Loryś, dr Paweł Gawrychowski, mgr Bartłomiej Dudek
+    \par
+
+    \parskip 0.1in
+
+  \end{center}
+
+  \begin{multicols}{3}
+    \tableofcontents
+  \end{multicols}
+
+  \begin{center}
+
+    File's control sum:
+
+    \begin{tabular}{c}
+    \begin{lstlisting}
+    cat file | tr -d "[:space:]" | md5sum
+    \end{lstlisting}
+    \end{tabular}
+
+  \end{center}
+
+
+
+  \pagebreak
+
+\begin{multicols}{2}
+\includecpp{Vimrc}{lib/template/.vimrc}{ff14ab2e0f8ebb23b8d91f9f9ab3582f}
+\includecpp{Template}{lib/template/template.cpp}{afe54fba633b5365328211e95ab4235b}
+\includecpp{Pragmas}{lib/template/pragmas.cpp}{7cabee7e3329d18592ba8797834694c4}
+\includecpp{Makefile}{lib/template/Makefile}{1c3262b6ed1e3d4de3058ef10b313146}
+\includecpp{2SAT}{lib/graphs/two_sat.cpp}{8363b0e12f36c79f8eeaca6b23b98816}
+\includecpp{Dinic}{lib/graphs/dinic.cpp}{ee279b38c7ec82ffad2853c69d09fc8a}
+\includecpp{Gomory-Hu}{lib/graphs/gomory-hu.cpp}{6bfc4a85537b9dd16bbd0dc039a29c4b}
+\includecpp{Min Cost Max Flow}{lib/graphs/mincostmaxflow.cpp}{72f01e19eb4ad784924072ba550105ec}
+\includecpp{Hungarian}{lib/graphs/hungarian.cpp}{bf99fa2858cd62d5c725aa617899112d}
+\includecpp{General Matching}{lib/graphs/GeneralMatching-Random.cpp}{284bc8de1ad931bf086fa111059dcfe1}
+\includecpp{Weighted Graph Matching}{lib/graphs/randomized-general-weighted-matching.cpp}{357c8dc9abf9d8dce960a34b136c0e1b}
+\includecpp{Dominator Tree}{lib/graphs/dominatory2.cpp}{f60f3bb9d21ed5a7ff0366b7cbb7bb5c}
+\includecpp{Directed MST}{lib/graphs/dmst.cpp}{ebb02b3ab6583bb66d9998e92f93c675}
+\includecpp{Turbo matching}{lib/graphs/turbo_matching.cpp}{565529bc2bd2546c12d5ac514d100004}
+\includecpp{All maximal cliques}{lib/graphs/all_maximal_cliques.cpp}{cce8d116720794886007453283605bb8}
+\includecpp{Policy-Based Data Structures}{lib/data-structures/pdb.cpp}{7af430e0eab65bafd07890a056a5f4a5}
+\includecpp{Fast hashtable}{lib/data-structures/fast_hashtable.cpp}{61735f813571a7a376aa53c841a7f932}
+\includecpp{Set comparator}{lib/data-structures/set_comparator.cpp}{55698d723e5131fcbb64936b846a3223}
+\includecpp{Fenwick}{lib/data-structures/fenwick.cpp}{6961bad25d49874985dd870e7676f291}
+\includecpp{Link Cut Tree}{lib/data-structures/LCT.cpp}{3de26330f43cb16a3249de56e7802dbf}
+\includecpp{Subset DP}{lib/data-structures/subset_dp.cpp}{af75ad8b948bebc93454866561dbed1f}
+\includecpp{Linear function max}{lib/data-structures/linear_function_max.cpp}{9af308ba86b4c02f6119bfbc1f0eb402}
+\includecpp{Treap}{lib/data-structures/treap-Adam.cpp}{c368c4baa09fccd69372d199d49b6d0c}
+\includecpp{RMQ}{lib/data-structures/rmq.cpp}{c5795c066f68626eeff6d3f4d7939ab2}
+\includecpp{Wavelet}{lib/data-structures/wavelet.cpp}{b1df6bfeb814126836a6397c6686a611}
+\includecpp{Manacher}{lib/text/Manacher-Radecki.cpp}{bec3c3aa22e11af07ca65aba34f8f78e}
+\includecpp{Z Algorithm}{lib/text/Z_algorithm.cpp}{9fe16bd4cdf892cb3dd4902537141da2}
+\includecpp{Tablica sufiksowa (KMR)}{lib/text/SuffixArray-Bohun.cpp}{a6d411bcccc6d53dcf89d972e4166801}
+\includecpp{Minimal Cyclic Shift}{lib/text/MinCyclicShift.cpp}{d7152ce63a24c08698efc1d6614b9428}
+\includecpp{All substring LCS}{lib/text/all-substring-lcs.cpp}{c5282ef0a4b5607d9f10834d57249cee}
+\includecpp{Eer Tree}{lib/text/eertree.cpp}{4688ffa1a4d943a6d38d6262ebdd7fd3}
+\includecpp{Aho Corasick}{lib/text/Aho-Corasick-Bohun.cpp}{3cb0555f3a1aa0ed2039cc397cfb04e9}
+\includecpp{Suffix Automata}{lib/text/suffix-automata.cpp}{9d23628122d8f32efb9e4496ad25441d}
+\includecpp{Haszer}{lib/text/Haszer.cpp}{fe61560dc8f080c45a20c2f584ab88f7}
+\includecpp{Fast Haszer}{lib/text/fast_hasher.cpp}{b4cfda0347bf535ccac0d9cad7a808cc}
+\includecpp{Yarin sieve}{lib/math/yarin-sieve.cpp}{b0d947d27230ee185dfee5f3dbea4828}
+\includecpp{Arithmetic Progressions Sums}{lib/math/arithmetic-progressions-sums.cpp}{4e1e30dd460407d3ca69674351ea4e1f}
+\includecpp{Partitions}{lib/math/partitions.cpp}{b9fc1294ad577760b8e822e37ab9fa3b}
+\includecpp{Chinese Remainder Theorem}{lib/math/crt.cpp}{5101903203c6e2f4fd3b35236a2dfc78}
+\includecpp{Linear Mod Minimum}{lib/math/linear_mod_min.cpp}{2957373b31cd6275496bf1def3df3cba}
+\includecpp{Rabin Miller}{lib/math/Rabin-Miller2.cpp}{d378c452de140d65723cf4aced8b7bdc}
+\includecpp{Rho Pollard}{lib/math/Rho-Pollard.cpp}{7dae74eb54659f2c47829ef8593ad832}
+\includecpp{FFT}{lib/math/fft.cpp}{4d6c99e53e9c2eab4ea8fffea35c5218}
+\includecpp{FFT}{lib/math/fft_Radecki.cpp}{e7aa770b0e04b5fb8e2ee1dacac4a4cf}
+\includecpp{NTT}{lib/math/ntt_adam.cpp}{34d2fd257bd18d89e7411ee474963513}
+\includecpp{Polynomial division}{lib/math/polydiv.cpp}{ea39ca4b66d63e4fcd3faa4f25f03fd6}
+\includecpp{General convolutions}{lib/math/Adam-Transformer.cpp}{f5d3d55d696d726c8de1c3610bdedb0e}
+\includecpp{Nim Multiplication}{lib/math/NimMultiplication.cpp}{77bff48b5825c0c729cfd96df8d60c43}
+\includecpp{Green Hackenbush}{lib/math/green-hackenbush.cpp}{557ca3abdcd69b4d4c9b4b223dc96ce7}
+\includecpp{Red Blue Hackenbush}{lib/math/redblue-hackenbush.cpp}{aa85012a35331797c1b1f69c95f26b77}
+\includecpp{Berlekamp}{lib/math/berlekamp.cpp}{0d0ab87e89132a8fab9e9a9b81638992}
+\includecpp{Simplex}{lib/math/simplex.cpp}{2c86cc90476d4687f17c0061f9956edf}
+\includecpp{Josephus}{lib/math/Josephus.cpp}{421dd32d75d61954519d94f3fc96fc4a}
+\includecpp{K-th powers}{lib/math/kth-powers.cpp}{1654ffda4b65697bdf22c3861f39bec5}
+\includecpp{Multiplicative function sum}{lib/math/multiplicative_function_sum.cpp}{ca2c8162f93b86c71e8efba7f759ce9a}
+\includecpp{Tonelli Shanks}{lib/math/Tonelli-Shanks.cpp}{590808cb69dfaf0f5a4e607e57e7238c}
+\includecpp{Fractions binary search}{lib/math/fraction_bs.cpp}{27ab3ee7f7e442ea886e57cc08c8bff6}
+\includecpp{Knight Moves}{lib/math/Knights-Moves.cpp}{d96e198f0fc92fd25b63ecf6f899d272}
+\includecpp{Gauss}{lib/math/Gauss.cpp}{87567ff9d3ecfeee7258bf305d169152}
+\includecpp{Geometry}{lib/geometry/geometry.cpp}{b626f804f5a1a84d2b6ea52368f10dab}
+\includecpp{Halfplane intersection}{lib/geometry/halfplane_adam.cpp}{ae4d415c820daf5ae2c11ba043e100cb}
+\includecpp{Hull}{lib/geometry/ch_and_cht.cpp}{825f3f1b67ad65545fddb9241452400e}
+\includecpp{Intersection Area of Circle and Polygon}{lib/geometry/circle_polygon_intersection.cpp}{22d843c3f9879b0eb8292701a4534812}
+\includecpp{Minimum enclosing circle}{lib/geometry/enclosing_circle.cpp}{1aa727609a185b98055b3bc98a0ec011}
+\includecpp{Manhattan MST}{lib/geometry/manhattan_mst.cpp}{3dd86e0eb3b50c3a61b6e63bd1ce75cf}
+\includecpp{Many segments intersection}{lib/geometry/many_segments_intersection.cpp}{fe47d29707f3168860ff38760ed19dea}
+\includecpp{3D Hull}{lib/geometry/3d_hull}{cde46a9f0091517efbee9d13ef0db7fe}
+\includecpp{Polygon tangent}{lib/geometry/polygon_tangent.cpp}{9d2fa5d6a74c97eb687a6ddd34a50226}
+
+\newpage
+\section{Formulas}
+\input{lib/math/formulas.tex}
+\end{multicols}
+
+
+\end{document}
+
